@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+# Приложение для поиска на GitHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Это простое приложение React, которое позволяет пользователям искать пользователей или репозитории GitHub и отображать соответствующую информацию.
 
-Currently, two official plugins are available:
+## Возможности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Поиск пользователей или репозиториев GitHub
+- Отображение полного имени и количества репозиториев для пользователей
+- Отображение имени и количества звезд для репозиториев
+- Предоставление четкой обратной связи в случаях загрузки, ошибки и отсутствия данных
 
-## Expanding the ESLint configuration
+## Используемые технологии
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- <b>React</b>
+- <b>TypeScript</b>
+- <b>Fetch API</b>
 
-- Configure the top-level `parserOptions` property like this:
+## Начало работы
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Чтобы запустить приложение, выполните следующие шаги:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Клонируйте репозиторий:
+
+git clone https://github.com/your-username/github-search-app.git
+
+2. Установите зависимости:
+
+cd github-search-app
+npm install
+
+3. Запустите сервер разработки:
+
+npm start
+
+Приложение будет доступно по адресу http://localhost:3000.
+
+## Компоненты
+
+Приложение разделено на два основных компонента:
+
+1. Компонент Form: Отвечает за отображение поля поиска и выпадающего списка, а также обработку взаимодействия пользователя.
+2. Компонент Result: Отвечает за отображение результатов поиска в зависимости от выбранного пункта (пользователь или репозиторий).
+
+Состояние и логика приложения управляются в компоненте App, который передает необходимые пропсы дочерним компонентам.
+
+## Управление состоянием
+
+Это приложение не использует библиотеку управления состоянием, такую как Redux или Context API. Вместо этого оно управляет состоянием с помощью встроенного хука useState в React и передает необходимое состояние и обработчики событий в виде пропсов дочерним компонентам.
+
+## Заключение
+
+Это приложение для поиска на GitHub демонстрирует использование React и TypeScript для создания простого и функционального приложения. Используя встроенное управление состоянием React и Fetch API, приложение обеспечивает плавный пользовательский опыт для поиска пользователей и репозиториев GitHub.</b>
